@@ -10,11 +10,13 @@
   body { background: #1a1a1a; color: #eee; font-family: system-ui, -apple-system, sans-serif; padding: 1.5rem 2rem; }
 
   /* ── Header ─────────────────────────────────── */
-  .header { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
-  .header img { height: 48px; width: auto; }
-  .header div { display: flex; flex-direction: column; }
-  h1 { font-size: 1.5rem; line-height: 1.2; }
-  .subtitle { color: #999; font-size: 0.8rem; margin-top: 0.15rem; }
+  .header { display: flex; align-items: flex-start; gap: 1.25rem; max-width: 1500px; margin: 0 auto 1.75rem; }
+  .header img { height: 56px; width: auto; flex-shrink: 0; margin-top: 0.1rem; }
+  .header-text { display: flex; flex-direction: column; max-width: 62ch; }
+  h1 { font-size: 1.55rem; line-height: 1.15; letter-spacing: -0.01em; }
+  .dek { color: #b8b8b8; font-size: 0.85rem; line-height: 1.6; margin-top: 0.5rem; }
+  .dek a { color: #10a544; text-decoration: none; border-bottom: 1px solid color-mix(in oklch, #10a544, transparent 65%); transition: border-color 0.15s ease; }
+  .dek a:hover { border-bottom-color: #10a544; }
 
   /* ── Layout ─────────────────────────────────── */
   .builder { display: flex; gap: 2rem; max-width: 1500px; margin: 0 auto 1.5rem; align-items: flex-start; }
@@ -168,14 +170,10 @@
 
 <div class="header">
   <img src="wc-logo.png" alt="Wonder Cabinet">
-  <div>
+  <div class="header-text">
     <h1>Episode Art Builder</h1>
-    <p class="subtitle">Select a slot, add images, drag to reposition, export at full resolution</p>
+    <p class="dek">Original design by <a href="https://artandsons.com/" target="_blank" rel="noopener">Art + Sons</a>. This tool generates art for new Wonder Cabinet episodes — the guest image goes on the right in the larger pane, and the left two images should tie into the conversation in interesting ways. Try different combinations to find a good balance of color and visual interest.</p>
   </div>
-</div>
-
-<div class="intro" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:0.9rem 1.1rem;margin:0.8rem 0 1.2rem;color:#bbb;font-size:0.78rem;line-height:1.55;max-width:900px;">
-  Original design by <a href="https://artandsons.com/" target="_blank" rel="noopener" style="color:#10a544;text-decoration:none;">Art + Sons</a>. This tool generates art for new Wonder Cabinet episodes — the guest image is designed to go on the right in the larger pane, and the left two images should tie into the conversation in interesting ways. Try different combinations to find a good balance of color and visual interest.
 </div>
 
 <div class="builder">
