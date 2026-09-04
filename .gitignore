@@ -3,3 +3,7 @@ node_modules/
 .env
 .env.local
 public/episode-preload/
+
+# Wrangler local state + the local secrets file for `wrangler pages dev`
+.wrangler/
+.dev.vars
